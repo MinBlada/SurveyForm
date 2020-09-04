@@ -4,63 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Survey Form</title>
   </head>
   <body>
-    <h1 id="tittle">We are happy to hear from you</h1>
-    <p id="description">
-      Thank you for taking the time to help us improve our services
-    </p>
+    <header>
+      <h1 id="tittle">We are happy to hear from you</h1>
+      <p id="description">
+        Thank you for taking the time to help us improve our services
+      </p>
+    </header>
     <form action="" id="survey-form">
       <label for="name" id="name-label"
-        >Name<br />
-        <input
-          type="text"
-          name="name"
-          placeholder="Enter your name"
-          id="name"
-        /> </label
-      ><br />
-      <label for="email" id="email-label"
-        >Email<br />
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter you email"
-          id="email"
-        /> </label
-      ><br />
-      <label for="number" id="number-label"
-        >Age<br />
-        <input
-          type="number"
-          name="age"
-          min="10"
-          max="99"
-          placeholder="Age"
-          id="number"
-        />
-      </label>
-      <p>How did you hear about us?</p>
-      <select name="hear about us">
-        <option value="friend">Friend</option>
-        <option value="search engine">Search Engine</option>
-        <option value="advert">Advertisement</option>
-        <option value="other">Other</option>
-      </select>
-      <p>Would you recommend Omnifood to a friend?</p>
-      <input type="radio" name="rating" value="yes" />Yes
-      <input type="radio" name="rating" value="maybe" />Maybe
-      <input type="radio" name="rating" value="no" />No<br />
-      <p>What would you like to see improved</p>
-      <input type="checkbox" name="meals" />Meals
-      <input type="checkbox" name="delivery" />Delivery
-      <input type="checkbox" name="customer service" />Customer Service<br />
-      <label>Newsletter</label>
-      <input type="checkbox" name="news" checked />Yes, please
-      <p>Any comments or suggestions?</p>
-      <input type="text-area" name="comment" />
-      <button id="submit">Submit</button>
+          >Name
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            id="name" class="focus"
+          />
+        </label>
+        <label for="email" id="email-label"
+          >Email
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            id="email" class="focus"
+          />
+        </label>
+        <label for="number"
+          >Age
+          <input
+            type="number"
+            name="age"
+            min="10"
+            max="99"
+            placeholder="Age"
+            id="number" class="focus"
+          />
+        </label>
+        <label for="select" id="about-us-label"
+          >How did you hear about us?
+          <div>
+            <select id="select" class="focus" name="hear about us">
+              <option value="friend">Friend</option>
+              <option value="search engine">Search Engine</option>
+              <option value="advert">Advertisement</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </label>
+          <p>Would you recommend Omnifood to a friend?</p>
+          <div>
+            <input type="radio" name="rating" value="yes" />Yes
+            <input type="radio" name="rating" value="maybe" />Maybe
+            <input type="radio" name="rating" value="no" />No
+          </div>
+        <p>What would you like to see improved?</p>
+          <div>
+            <input type="checkbox" name="meals" />Meals
+            <input type="checkbox" name="delivery" />Delivery
+            <input type="checkbox" name="customer service" />Customer Service
+          </div>
+        <p>Newsletter</p>
+          <div><input type="checkbox" name="news" checked />Yes, please</div>
+        
+        <label>Any comments or suggestions?
+          <div class="area-submit">
+          <textarea maxlength="500" id="wide-area" placeholder="Enter your comments...(max. 500 characters)" ></textarea>
+        </label>
+        <button id="submit">Submit</button>
+      </div>
+    
     </form>
+    <script src="script.js"></script>
   </body>
 </html>
